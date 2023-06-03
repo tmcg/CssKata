@@ -1,0 +1,115 @@
+
+body {
+   font-family: 'Bebas Neue', sans-serif;
+   font-size: 42px;
+   color: whitesmoke;
+   background: black;
+}
+
+.mx-grid {
+   display: grid;
+   grid-template-rows: repeat(8, 110px);
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-flow: column;
+   grid-column-gap: 55px;
+}
+
+@media all and (max-width:1200px) {
+    .mx-grid {
+       display: grid;
+       grid-template-rows: repeat(12, 110px);
+       grid-template-columns: repeat(2, 1fr);
+       grid-auto-flow: column;
+       grid-column-gap: 55px;
+    }
+}
+
+
+@media all and (max-width:960px) {
+    .mx-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-auto-flow: row;
+    }
+}
+
+.mx {
+   display: flex;
+   align-items: center;
+}
+
+.mx .mx-label {
+   font-size: 36px;
+   width: 250px;
+   padding: 15px;
+   padding-left: 30px;
+   overflow: wrap;
+}
+
+.mx .mx-num {
+   margin: 0 10px 0 10px;
+   font-size: 96px;
+}
+
+.mr-even .mx-vr {
+   flex: auto;
+   text-align: right;
+}
+
+.mx .mx-vr {
+   margin: 0;
+   font-size: 56px;
+}
+
+.mr-odd .mx-num { order: -2; }
+.mr-odd .mx-vr { order: -1; }
+.mr-even .mx-vr { order: 1; }
+.mr-even .mx-num { order: 2; }
+
+.mx-color1 {
+   background: rgb(66,160,211); /* blue row */
+   background: linear-gradient(180deg, rgba(66,160,211,1) 0%, rgba(68,163,214,1) 100%);
+}
+
+.mx-color2 {
+   background: rgb(143,2,49); /* red row */
+   background: linear-gradient(180deg, rgba(143,2,49,1) 0%, rgba(176,3,64,1) 100%);
+}
+
+.mx-color3 {
+   background: rgb(185,99,21); /* orange row */
+   background: linear-gradient(180deg, rgba(185,99,21,1) 0%, rgba(237,138,0,1) 100%);
+}
+
+.mx-color4 {
+   background: rgb(46,114,100); /* teal row */
+   background: linear-gradient(180deg, rgba(46,114,100,1) 0%, rgba(52,125,113,1) 100%);
+}
+
+.mx-color1-tab {
+   background: #0b86b7;
+   height:100%;
+   width:10px;
+   order: -3;
+}
+
+.mx-color2-tab {
+   background: #840000;
+   height: 100%;
+   width: 10px;
+   order: 3;
+}
+
+.mx-color3-tab {
+   background: #a07201;
+   height: 100%;
+   width: 10px;
+   order: -3;
+}
+
+.mx-color4-tab {
+   background: #0d5a4a;
+   height: 100%;
+   width: 10px;
+   order: 3;
+}

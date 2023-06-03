@@ -1,2 +1,2 @@
-# CssKata
-CSS Playground
+# CSS Code Kata
+
